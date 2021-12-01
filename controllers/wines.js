@@ -21,6 +21,15 @@ wineRouter.get("/redWineIndex/seed", (req, res) => {
     });
 });
 
+// white wine seed route
+wineRouter.get("/whiteWineIndex/seed", (req, res) => {
+    Wine.deleteMany({}, (error, allWhiteWines) => {
+        Wine.create(whiteWineSeed, (error, data) => {
+            res.send("Hello, white wine seeded?");
+        });
+    });
+});
+
 // landing page route
 wineRouter.get("/", (req, res) => {
     res.render("landing.ejs");
