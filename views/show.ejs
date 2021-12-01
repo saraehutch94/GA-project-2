@@ -25,6 +25,7 @@
     <p><%=foundWine.region%></p>
     <p><%=foundWine.description%></p>
 
+    <a href="/vino-italiano/<%=foundWine._id%>/edit">Edit</a>
     <form action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete"/>
     </form>

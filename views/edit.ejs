@@ -16,6 +16,18 @@
         <a href="/vino-italiano/<%=foundWine._id%>">Back to <%=foundWine.varietal%></a>
     </nav>
 
+    <form action="/vino-italiano/<%=foundWine._id%>?_method=PUT" method="POST">
+        <label>
+            Region:
+            <input type="text" name="region" value="<%=foundWine.region%>"/>
+        </label>
+        <label>
+            Description:
+            <input type="text" name="description" value="<%=foundWine.description%>"/>
+        </label>
+        <input type="submit" value="Submit"/>
+    </form>
+
     <footer>
         <p>Copyright &copy; All Rights Reserved</p>
         <p>2021 Vino Italiano</p>
