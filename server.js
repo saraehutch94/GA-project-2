@@ -1,6 +1,7 @@
 // Require dependencies
 
 const express = require("express");
+const methodOverride = require("method-override");
 
 // Initialize the application
 
@@ -21,6 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // static/public middleware
 app.use(express.static("public"));
+
+// method-override middleware
+app.use(methodOverride("_method"));
 
 // Mount routes
 
