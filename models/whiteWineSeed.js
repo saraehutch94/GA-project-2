@@ -1,0 +1,58 @@
+module.exports = [
+    {
+        varietal: "Falanghina",
+        region: "Campania",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Fiano",
+        region: "Campania",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Gavi",
+        region: "Piedmont",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Greco",
+        region: "Campania",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Pecorino",
+        region: "Abruzzo",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Prosecco",
+        region: "Veneto",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Verdicchio",
+        region: "Marche",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Vermentino",
+        region: "Sardinia",
+        shade: "White",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+];
