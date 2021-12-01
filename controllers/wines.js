@@ -32,7 +32,7 @@ wineRouter.get("/shades", (req, res) => {
 
 // red wine (index) route
 wineRouter.get("/redIndex", (req, res) => {
-    Wine.find({color: "Red"}, (error, allReds) => {
+    Wine.find({shade: "Red"}, (error, allReds) => {
         res.render("redIndex.ejs", {allReds});
     });
 });
