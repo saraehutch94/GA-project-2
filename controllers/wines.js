@@ -16,7 +16,7 @@ wineRouter.get("/", (req, res) => {
 
 // shades route
 wineRouter.get("/shades", (req, res) => {
-    res.send("Hello Shades!");
+    res.render("shades.ejs");
 });
 
 // Export router object for use in server.js
