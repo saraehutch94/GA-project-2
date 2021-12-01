@@ -2,6 +2,7 @@
 
 const express = require("express");
 const Wine = require("../models/wine");
+const redWineSeed = require("../models/redWineSeed");
 
 // Create router/controller object
 
