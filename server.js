@@ -50,7 +50,8 @@ app.use(express.static("public"));
 // method-override middleware
 app.use(methodOverride("_method"));
 
-// Mount routes
+// Mount router middleware
+app.use("/vino-italiano", wineController);
 
 // Tell app to listen for requests from client/browser
 
