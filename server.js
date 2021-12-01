@@ -20,6 +20,9 @@ const PORT = process.env.PORT;
 
 const DATABASE_URL = process.env.DATABASE_URL;
 
+// connect mongoose to database/mongoDB
+mongoose.connect(DATABASE_URL);
+
 // Mount middleware
 
 // body-parser middleware
