@@ -37,6 +37,13 @@ wineRouter.get("/redIndex", (req, res) => {
     });
 });
 
+// white wine (index) route
+wineRouter.get("/whiteIndex", (req, res) => {
+    Wine.find({shade: "White"}, (error, allWhites) => {
+        res.render("whiteIndex.ejs", {allWhites});
+    });
+});
+
 // Export router object for use in server.js
 
 module.exports = wineRouter;
