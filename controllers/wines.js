@@ -19,6 +19,11 @@ wineRouter.get("/shades", (req, res) => {
     res.render("shades.ejs");
 });
 
+// red wine (index) route
+wineRouter.get("/redWineIndex", (req, res) => {
+    
+});
+
 // Export router object for use in server.js
 
 module.exports = wineRouter;
