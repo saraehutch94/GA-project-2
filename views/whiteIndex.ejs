@@ -7,6 +7,22 @@
     <title>Vino Bianco | Vino Italiano</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Vino Italiano</h1>
+    </header>
+    <nav>
+        <a href="/vino-italiano/shades">Vino</a>
+    </nav>
+    <h2>Vino Bianco</h2>
+    <% allWhites.forEach(white => { %>
+        <ul>
+            <li><%= white.img %></li>
+            <li><%= white.varietal %></li>
+        </ul>
+    <% }); %>
+    <footer>
+        <p>Copyright &copy; All Rights Reserved</p>
+        <p>2021 Vino Italiano</p>
+    </footer>
 </body>
 </html>
