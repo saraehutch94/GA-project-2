@@ -1,5 +1,7 @@
 // Require dependencies
 
+const express = require("express");
+
 // Initialize the application
 
 // Configure application settings
