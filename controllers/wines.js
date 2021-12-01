@@ -88,6 +88,11 @@ wineRouter.post("/whiteIndex", (req, res) => {
 
 
 // edit route
+wineRouter.get("/:id", (req, res) => {
+    Wine.findById(req.params.id, (error, foundWine) => {
+        res.render("edit.ejs", {foundWine});
+    });
+});
 
 
 // show route
