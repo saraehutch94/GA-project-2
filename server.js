@@ -10,6 +10,10 @@ const app = express();
 
 // Set up port value
 
+require("dotenv").config();
+
+const PORT = process.env.PORT;
+
 // Mount middleware
 
 // Mount routes
