@@ -26,6 +26,18 @@ mongoose.connect(DATABASE_URL);
 // variable representing mongoose connection object
 const db = mongoose.connection;
 
+db.on("error", (error) => {
+    console.log("Error: " + error.message);
+});
+
+db.on("connection", () => {
+    console.log("mongoDB is connected");
+});
+
+db.on("disconnected", () => {
+    console.log("mongoDB is disconnected");
+});
+
 // Mount middleware
 
 // body-parser middleware
