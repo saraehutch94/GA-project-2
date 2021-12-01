@@ -72,7 +72,10 @@ wineRouter.post("/redIndex", (req, res) => {
 // create white route
 wineRouter.post("/whiteIndex", (req, res) => {
     req.body.shade = "White";
-    console.log(req.body);
+    
+    Wine.create(req.body, (error, newWhite) => {
+        res.redirect("/vino-italiano/whiteIndex");
+    });
 });
 
 
