@@ -83,6 +83,11 @@ wineRouter.post("/whiteIndex", (req, res) => {
 
 
 // show route
+wineRouter.get("/:id", (req, res) => {
+    Wine.findById(req.params.id, (error, foundWine) => {
+        res.render("show.ejs", {foundWine});
+    });
+});
 
 
 // Export router object for use in server.js
