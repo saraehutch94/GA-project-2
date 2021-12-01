@@ -16,6 +16,9 @@ const PORT = process.env.PORT;
 
 // Mount middleware
 
+// body-parser middleware
+app.use(express.urlencoded({ extended: false }));
+
 // Mount routes
 
 app.get("/", (req, res) => {
