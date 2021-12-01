@@ -14,8 +14,11 @@
         <a href="/vino-italiano/shades">Vino</a>
     </nav>
     <h2>Vino Rosso</h2>
-    <p>
-        <%= allReds %>
-    </p>
+    <% allReds.forEach(red => { %>
+    <ul>
+        <li><%= red.img %></li>
+        <li><%= red.varietal %></li>
+    </ul>
+    <% }); %>
 </body>
 </html>
