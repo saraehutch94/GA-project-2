@@ -10,6 +10,17 @@ const wineRouter = express.Router();
 
 // List router actions
 
+// seed routes
+
+// red wine seed route
+wineRouter.get("/redWineIndex/seed", (req, res) => {
+    Wine.deleteMany({}, (error, allRedWines) => {
+        Wine.create(redWineSeed, (error, data) => {
+            res.send("Hello, red wine seeded?");
+        });
+    });
+});
+
 // landing page route
 wineRouter.get("/", (req, res) => {
     res.render("landing.ejs");
