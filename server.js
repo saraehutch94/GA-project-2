@@ -4,6 +4,8 @@ const express = require("express");
 
 // Initialize the application
 
+const app = express();
+
 // Configure application settings
 
 // Set up port value
