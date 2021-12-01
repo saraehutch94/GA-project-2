@@ -23,6 +23,9 @@ const DATABASE_URL = process.env.DATABASE_URL;
 // connect mongoose to database/mongoDB
 mongoose.connect(DATABASE_URL);
 
+// variable representing mongoose connection object
+const db = mongoose.connection;
+
 // Mount middleware
 
 // body-parser middleware
