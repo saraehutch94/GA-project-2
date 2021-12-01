@@ -10,6 +10,7 @@ const wineSchema = new Schema(
     {
         varietal: {type: String, required: true},
         region: String,
+        shade: {type: String, required: true},
         description: {type: String, required: true},
         img: String,
     }, { timestamps: true },
