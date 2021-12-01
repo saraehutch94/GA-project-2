@@ -25,6 +25,10 @@
     <p><%=foundWine.region%></p>
     <p><%=foundWine.description%></p>
 
+    <form action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
+
     <footer>
         <p>Copyright &copy; All Rights Reserved</p>
         <p>2021 Vino Italiano</p>
