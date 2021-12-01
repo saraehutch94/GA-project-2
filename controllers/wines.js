@@ -66,6 +66,16 @@ wineRouter.delete("/:id", (req, res) => {
 });
 
 // update route
+wineRouter.put("/:id", (req, res) => {
+    Wine.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true },
+        (error, updatedWine) => {
+            res.redirect("/vino-italiano/" + req.params.id);
+        }
+    );
+});
 
 
 // create red route
