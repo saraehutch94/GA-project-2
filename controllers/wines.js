@@ -9,3 +9,6 @@ const wineRouter = express.Router();
 
 // List router actions
 
+wineRouter.get("/vino-italiano", (req, res) => {
+    res.send("Hello World");
+});
