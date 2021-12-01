@@ -1,5 +1,6 @@
 // Require dependencies
 
+const { urlencoded } = require("express");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -7,8 +8,9 @@ const Schema = mongoose.Schema;
 
 const wineSchema = new Schema(
     {
-        varietal: String,
+        varietal: {type: String, required: true},
         region: String,
-        description: String
+        description: {type: String, required: true},
+        img: String,
     }, { timestamps: true },
 );
