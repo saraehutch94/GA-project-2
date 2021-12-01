@@ -16,6 +16,8 @@ require("dotenv").config();
 
 const PORT = process.env.PORT;
 
+// Database connection
+
 // Mount middleware
 
 // body-parser middleware
