@@ -50,6 +50,9 @@ wineRouter.get("/redIndex/new", (req, res) => {
 });
 
 // new white route
+wineRouter.get("/whiteIndex/new", (req, res) => {
+    res.render("newWhite.ejs");
+});
 
 
 // delete route
@@ -66,7 +69,6 @@ wineRouter.post("/redIndex", (req, res) => {
         res.redirect("/vino-italiano/redIndex");
     });
 });
-
 
 // create white route
 
