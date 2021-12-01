@@ -30,7 +30,7 @@ db.on("error", (error) => {
     console.log("Error: " + error.message);
 });
 
-db.on("connection", () => {
+db.on("connected", () => {
     console.log("mongoDB is connected");
 });
 
