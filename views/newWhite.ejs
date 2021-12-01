@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vino Bianco | Vino Italiano</title>
+</head>
+<body>
+    <header>
+        <h1>Vino Italiano</h1>
+    </header>
+    <nav>
+        <a href="/vino-italiano">Home</a>
+        <a href="/vino-italiano/shades">Vino</a>
+        <a href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
+    </nav>
+    <h2>New Vino Bianco</h2>
+    <form action="/vino-italiano/whiteIndex" method="POST">
+        <label>
+            Varietal:
+            <input type="text" name="varietal">
+        </label>
+        <label>
+            Region:
+            <input type="text" name="region">
+        </label>
+        <label>
+            Description:
+            <input type="text" name="description">
+        </label>
+        <label>
+            Image:
+            <input type="text" name="img">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

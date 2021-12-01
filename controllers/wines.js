@@ -54,7 +54,6 @@ wineRouter.get("/whiteIndex/new", (req, res) => {
     res.render("newWhite.ejs");
 });
 
-
 // delete route
 
 
