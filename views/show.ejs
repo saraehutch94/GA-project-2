@@ -7,6 +7,17 @@
     <title><%= foundWine.varietal %> | Vino Italiano</title>
 </head>
 <body>
-    
+    <header>
+        <h1><%= foundWine.varietal %></h1>
+    </header>
+    <nav>
+        <a href="/vino-italiano">Home</a>
+        <a href="/vino-italiano/shades">Vino</a>
+        <% if (foundWine.shade === "Red") { %>
+            <a href="/vino-italiano/redIndex">Back to Vino Rosso</a>
+        <% } else { %>    
+            <a href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
+        <% } %>    
+    </nav>
 </body>
 </html>
