@@ -18,7 +18,11 @@
     <h2>Vino Bianco</h2>
     <% allWhites.forEach(white => { %>
         <ul>
-            <li><%= white.img %></li>
+            <li>
+                <a href="/vino-italiano/<%=white._id%>">
+                    <%= white.img %>
+                </a>    
+            </li>
             <li><%= white.varietal %></li>
         </ul>
     <% }); %>
