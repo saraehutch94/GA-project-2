@@ -14,3 +14,7 @@ const wineSchema = new Schema(
         img: String,
     }, { timestamps: true },
 );
+
+// Create model from Schema and export
+
+module.exports = mongoose.model("Wine", wineSchema);
