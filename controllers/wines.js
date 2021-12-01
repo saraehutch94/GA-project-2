@@ -15,7 +15,7 @@ const wineRouter = express.Router();
 wineRouter.get("/seed", (req, res) => {
     Wine.deleteMany({}, (error, allWines) => {
         Wine.create(wineSeed, (error, data) => {
-            res.send("Hello, wine seeded?");
+            res.redirect("/vino-italiano");
         });
     });
 });
