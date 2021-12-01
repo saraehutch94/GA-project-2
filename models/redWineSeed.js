@@ -1,0 +1,51 @@
+module.exports = [
+    {
+        varietal: "Barbera",
+        region: "Piedmont",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Barolo",
+        region: "Piedmont",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Chianti",
+        region: "Tuscany",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Dolcetto",
+        region: "Piedmont",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Montepulciano",
+        region: "Abruzzo",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Nero d'Avola",
+        region: "Sicily",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
+        varietal: "Sangiovese",
+        region: "Tuscany",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+];
