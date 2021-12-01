@@ -2,8 +2,7 @@
 
 const express = require("express");
 const Wine = require("../models/wine");
-const redWineSeed = require("../models/redWineSeed");
-const whiteWineSeed = require("../models/whiteWineSeed");
+const wineSeed = require("../models/wineSeed");
 
 // Create router/controller object
 
@@ -11,22 +10,12 @@ const wineRouter = express.Router();
 
 // List router actions
 
-// seed routes
+// seed route
 
-// red wine seed route
-wineRouter.get("/redWineIndex/seed", (req, res) => {
+wineRouter.get("/seed", (req, res) => {
     Wine.deleteMany({}, (error, allRedWines) => {
-        Wine.create(redWineSeed, (error, data) => {
-            res.send("Hello, red wine seeded?");
-        });
-    });
-});
-
-// white wine seed route
-wineRouter.get("/whiteWineIndex/seed", (req, res) => {
-    Wine.deleteMany({}, (error, allWhiteWines) => {
-        Wine.create(whiteWineSeed, (error, data) => {
-            res.send("Hello, white wine seeded?");
+        Wine.create(wineSeed, (error, data) => {
+            res.send("Hello, wine seeded?");
         });
     });
 });
