@@ -14,7 +14,25 @@
         <a href="/vino-italiano/shades">Vino</a>
     </nav>
     <h2>New Vino Rosso</h2>
-
+    <form action="/vino-italiano/redIndex" method="POST">
+        <label>
+            Varietal:
+            <input type="text" name="varietal">
+        </label>
+        <label>
+            Region:
+            <input type="text" name="region">
+        </label>
+        <label>
+            Description:
+            <input type="text" name="description">
+        </label>
+        <label>
+            Image:
+            <input type="text" name="img">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
     <footer>
         <p>Copyright &copy; All Rights Reserved</p>
         <p>2021 Vino Italiano</p>
