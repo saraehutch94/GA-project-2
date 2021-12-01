@@ -51,10 +51,6 @@ app.use(methodOverride("_method"));
 
 // Mount routes
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
-
 // Tell app to listen for requests from client/browser
 
 app.listen(PORT, () => {
