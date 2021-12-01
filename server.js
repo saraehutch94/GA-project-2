@@ -19,3 +19,7 @@ const PORT = process.env.PORT;
 // Mount routes
 
 // Tell app to listen for requests from client/browser
+
+app.listen(PORT, () => {
+    console.log("Express is listening on port " + PORT);
+});
