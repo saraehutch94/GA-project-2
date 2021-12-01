@@ -44,6 +44,11 @@ wineRouter.get("/whiteIndex", (req, res) => {
     });
 });
 
+// new route
+wineRouter.get("/new", (req, res) => {
+    res.render("new.ejs");
+});
+
 // Export router object for use in server.js
 
 module.exports = wineRouter;
