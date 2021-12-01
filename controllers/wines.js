@@ -12,3 +12,7 @@ const wineRouter = express.Router();
 wineRouter.get("/vino-italiano", (req, res) => {
     res.send("Hello World");
 });
+
+// Export router object for use in server.js
+
+module.exports = wineRouter;
