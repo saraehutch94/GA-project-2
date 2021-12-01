@@ -9,8 +9,9 @@ const wineRouter = express.Router();
 
 // List router actions
 
+// landing page route
 wineRouter.get("/", (req, res) => {
-    res.send("Hello World");
+    res.render("landing.ejs");
 });
 
 // Export router object for use in server.js
