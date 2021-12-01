@@ -35,6 +35,13 @@ module.exports = [
         img: "#",
     },
     {
+        varietal: "Nebbiolo",
+        region: "Piedmont",
+        shade: "Red",
+        description: "TODO: EDIT DESCRIPTION",
+        img: "#",
+    },
+    {
         varietal: "Nero d'Avola",
         region: "Sicily",
         shade: "Red",
