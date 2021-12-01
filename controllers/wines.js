@@ -13,7 +13,7 @@ const wineRouter = express.Router();
 // seed route
 
 wineRouter.get("/seed", (req, res) => {
-    Wine.deleteMany({}, (error, allRedWines) => {
+    Wine.deleteMany({}, (error, allWines) => {
         Wine.create(wineSeed, (error, data) => {
             res.send("Hello, wine seeded?");
         });
