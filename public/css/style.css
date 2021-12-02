@@ -2,3 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Fauna One', serif;
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+}
