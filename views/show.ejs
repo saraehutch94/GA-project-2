@@ -2,9 +2,7 @@
 <html lang="en">
 <%-include("./partials/head.ejs")%>
 <body>
-    <header>
-        <h1><%= foundWine.varietal %></h1>
-    </header>
+    <%-include("./partials/header.ejs")%>
     <nav>
         <a href="/vino-italiano">Home</a>
         <a href="/vino-italiano/shades">Vino</a>
@@ -14,7 +12,7 @@
             <a href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
         <% } %>    
     </nav>
-    
+    <h2><%= foundWine.varietal %></h2>
     <p><img src="<%=foundWine.img%>" alt="found wine image" width="290px" height="350px"/></p>
     <p><%=foundWine.varietal%></p>
     <p><%=foundWine.region%></p>
