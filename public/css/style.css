@@ -10,11 +10,13 @@ body {
     font-family: 'Fauna One', serif;
     background-image: url("https://i.imgur.com/2u8ZB4j.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
     display: flex;
     justify-content: center;
+    background-color: rgba(255,255,255, 0.3);
 }
 
 h1 {
@@ -40,6 +42,11 @@ nav {
     width: 70%;
 }
 
+.full-para {
+    border-radius: 25px;
+    background-color: rgba(255,255,255, 0.6);
+}
+
 .landing-para {
     font-size: 20px;
     margin-bottom: 40px;
@@ -52,6 +59,8 @@ footer {
     align-items: center;
     top: 100vh;
     margin-top: 30px;
+    padding-top: 20px;
+    background-color: rgba(255,255,255, 0.3);
 }
 
 .footer-div {
