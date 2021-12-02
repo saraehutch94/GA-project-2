@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= foundWine.varietal %> | Vino Italiano</title>
-</head>
+<%-include("./partials/head.ejs")%>
 <body>
     <header>
         <h1><%= foundWine.varietal %></h1>
@@ -30,9 +23,6 @@
         <input type="submit" value="Delete"/>
     </form>
 
-    <footer>
-        <p>Copyright &copy; All Rights Reserved</p>
-        <p>2021 Vino Italiano</p>
-    </footer>
+    <%- include("./partials/footer.ejs")%>
 </body>
 </html>
