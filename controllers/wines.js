@@ -77,7 +77,6 @@ wineRouter.put("/:id", (req, res) => {
     );
 });
 
-
 // create red route
 wineRouter.post("/redIndex", (req, res) => {
     req.body.shade = "Red";
@@ -96,14 +95,12 @@ wineRouter.post("/whiteIndex", (req, res) => {
     });
 });
 
-
 // edit route
 wineRouter.get("/:id/edit", (req, res) => {
     Wine.findById(req.params.id, (error, foundWine) => {
         res.render("edit.ejs", {foundWine});
     });
 });
-
 
 // show route
 wineRouter.get("/:id", (req, res) => {
