@@ -27,5 +27,13 @@ nav {
 
 footer {
     position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 100vh;
+}
+
+.footer-div {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
