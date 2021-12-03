@@ -69,6 +69,32 @@ h1 {
     margin-bottom: 40px;
 }
 
+.shade-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.button-box {
+    padding: 20px;
+    background-color:rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+}
+
+.shade-button-text {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    border-bottom: 3px solid #fff3;
+}
+
+.shade-button-text:hover {
+    border-bottom-color: #fff9;
+}
+
+
 footer {
     position: sticky;
     display: flex;
