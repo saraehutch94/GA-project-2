@@ -133,6 +133,55 @@ h1 {
     height: 250px;
 }
 
+.show-wrapper {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 auto;
+}
+
+.show-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-img {
+    margin-right: 40px;
+}
+
+.detail-box {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    max-height: 350px;
+}
+
+.button-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    border-top: 1px solid #ccccccc0;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #ccccccc0;
+    font-size: 15px;
+}
+
+.edit-button-text {
+    text-decoration: none;
+    color: white;
+}
+
+input[type=submit]{
+    font-family: 'Fauna One', serif;
+}
+
 footer {
     position: sticky;
     display: flex;

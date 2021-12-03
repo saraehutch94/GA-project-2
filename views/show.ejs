@@ -4,26 +4,34 @@
 <body>
     <header>
         <h1>Vino Italiano</h1>
+        <nav class="flex-nav">
+            <a class="nav-list-item" href="/vino-italiano">Home</a>
+            <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
+            <% if (foundWine.shade === "Red") { %>
+                <a class="nav-list-item" href="/vino-italiano/redIndex">Back to Vino Rosso</a>
+            <% } else { %>    
+                <a class="nav-list-item" href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
+            <% } %>    
+        </nav>
     </header>
-    <nav>
-        <a href="/vino-italiano">Home</a>
-        <a href="/vino-italiano/shades">Vino</a>
-        <% if (foundWine.shade === "Red") { %>
-            <a href="/vino-italiano/redIndex">Back to Vino Rosso</a>
-        <% } else { %>    
-            <a href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
-        <% } %>    
-    </nav>
-    <h2><%= foundWine.varietal %></h2>
-    <p><img src="<%=foundWine.img%>" alt="found wine image" width="290px" height="350px"/></p>
-    <p><%=foundWine.varietal%></p>
-    <p><%=foundWine.region%></p>
-    <p><%=foundWine.description%></p>
-
-    <a href="/vino-italiano/<%=foundWine._id%>/edit">Edit</a>
-    <form action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete"/>
-    </form>
+    <div class="show-wrapper">
+        <div class="show-img">
+            <img src="<%=foundWine.img%>" alt="found wine image" width="290px" height="350px"/>
+        </div>
+        <div class="show-detail-wrapper">
+            <div class="detail-box">
+                <h2><%=foundWine.varietal%></h2>
+                <p><%=foundWine.region%></p>
+                <p><%=foundWine.description%></p>
+                <div class="button-wrapper">
+                    <div><a class="edit-button edit-button-text" href="/vino-italiano/<%=foundWine._id%>/edit">Edit</a></div>
+                    <form action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
+                        <input class="edit-button edit-button-text" type="submit" value="Delete"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <%- include("./partials/footer.ejs")%>
 </body>
