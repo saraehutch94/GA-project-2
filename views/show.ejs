@@ -25,8 +25,8 @@
                 <p><%=foundWine.description%></p>
                 <div class="button-wrapper">
                     <div><a class="edit-button edit-button-text" href="/vino-italiano/<%=foundWine._id%>/edit">Edit</a></div>
-                    <form action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
-                        <input class="edit-button edit-button-text" type="submit" value="Delete"/>
+                    <form class="inline-form" action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
+                        <input class="delete-button inline-input" type="submit" value="Delete"/>
                     </form>
                 </div>
             </div>

@@ -107,6 +107,10 @@ h1 {
     margin-bottom: 30px;
 }
 
+.no-bottom {
+    text-decoration: none;
+}
+
 .ind-wine {
     display: flex;
     flex-direction: column;
@@ -159,7 +163,6 @@ h1 {
 
 .button-wrapper {
     display: flex;
-    margin-bottom: 10px;
 }
 
 .edit-button {
@@ -173,9 +176,29 @@ h1 {
     font-size: 15px;
 }
 
+.edit-button:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
 .edit-button-text {
     text-decoration: none;
     color: white;
+}
+
+.delete-button {
+    padding: 10px;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    border-top: 1px solid #ccccccc0;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #ccccccc0;
+    font-size: 15px;
+}
+
+.delete-button:hover {
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 input[type=submit]{
