@@ -11,16 +11,18 @@
         </nav>
     </header>
     <h2>Vino Rosso</h2>
-    <% allReds.forEach(red => { %>
-    <ul>
-        <li>
-            <a href="/vino-italiano/<%=red._id%>">
-                <img src="<%= red.img %>" alt="red wine img" width="290px" height="350px"/>
-            </a>    
-        </li>
-        <li><%= red.varietal %></li>
-    </ul>
-    <% }); %>
+    <div class="wrapper">
+        <div class="wine-wrapper">
+            <% allReds.forEach(red => { %>
+                <div class="ind-wine">
+                    <a href="/vino-italiano/<%=red._id%>">
+                        <img class="index-img" src="<%= red.img %>" alt="red wine img" width="290px" height="350px"/>
+                    </a>
+                    <p><%= red.varietal %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>
