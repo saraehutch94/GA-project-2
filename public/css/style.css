@@ -26,6 +26,23 @@ h1 {
     justify-self: start;
 }
 
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list-item {
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid #fff3;
+    font-size: 20px;
+}
+
+.nav-list-item:hover {
+    border-bottom-color: #fff9;
+}
+
 .paragraph-wrapper {
     flex-grow: 1;
     display: flex;
