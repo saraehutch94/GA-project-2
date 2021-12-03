@@ -79,21 +79,23 @@ h1 {
 
 .button-box {
     padding: 20px;
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(0, 0, 0, 0.7);
     border-radius: 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    font-size: 40px;
+}
+
+.button-box:hover {
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 .shade-button-text {
     text-decoration: none;
     color: white;
-    font-size: 40px;
-    border-bottom: 3px solid #fff3;
 }
-
-.shade-button-text:hover {
-    border-bottom-color: #fff9;
-}
-
 
 footer {
     position: sticky;
