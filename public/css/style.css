@@ -15,7 +15,6 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: white;
 }
 
@@ -23,13 +22,12 @@ h1 {
     font-size: 60px;
     font-family: 'Lobster Two', cursive;
     text-shadow: 3px 3px #ff7300;
-    justify-self: start;
+    text-align: center;
 }
 
-.nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.flex-nav {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-list-item {
