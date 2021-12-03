@@ -10,17 +10,20 @@
         <a href="/vino-italiano/shades">Vino</a>
         <a href="/vino-italiano/whiteIndex/new">New Vino Bianco</a>
     </nav>
-    <h2>Vino Bianco</h2>
-    <% allWhites.forEach(white => { %>
-        <ul>
-            <li>
+    <div class="wrapper">
+        <div class="wine-wrapper">
+            <% allWhites.forEach(white => { %>
                 <a href="/vino-italiano/<%=white._id%>">
-                    <img src="<%= white.img %>" alt="white wine img" width="290px" height="350px"/>
-                </a>    
-            </li>
-            <li><%= white.varietal %></li>
-        </ul>
-    <% }); %>
+                    <div class="ind-wine">
+                        <p>
+                            <img class="index-img" src="<%= white.img %>" alt="white wine img" width="290px" height="350px"/>
+                        </p>
+                        <div class="wine-name-index"><strong><%= white.varietal %></strong></div>
+                    </div>
+                </a>
+            <% }); %>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>
