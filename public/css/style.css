@@ -2,39 +2,39 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     font-family: 'Fauna One', serif;
-    background-image: url("https://i.imgur.com/2u8ZB4j.jpg");
+    background-image: url("https://i.imgur.com/DxzTVst.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 header {
     display: flex;
-    justify-content: center;
-    background-color: rgba(255,255,255, 0.3);
+    color: white;
 }
 
 h1 {
     font-size: 60px;
     font-family: 'Lobster Two', cursive;
+    text-shadow: 3px 3px #ff7300;
+    justify-self: start;
 }
 
 nav {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+    justify-self: end;
 }
 
-.page-wrapper {
+.paragraph-wrapper {
     min-height: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.landing-title {
+    padding: 10px 10px 0 10px;
 }
 
 .about-vino-italiano {
@@ -44,10 +44,12 @@ nav {
 
 .full-para {
     border-radius: 25px;
-    background-color: rgba(255,255,255, 0.6);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.514);
 }
 
 .landing-para {
+    padding: 10px;
     font-size: 20px;
     margin-bottom: 40px;
 }
@@ -60,10 +62,10 @@ footer {
     top: 100vh;
     margin-top: 30px;
     padding-top: 20px;
-    background-color: rgba(255,255,255, 0.3);
+    color: white;
 }
 
 .footer-div {
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
