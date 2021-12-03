@@ -99,7 +99,7 @@ h1 {
 
 .wine-wrapper {
     display: grid;
-    width: 90%;
+    width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: 0 auto;
     grid-gap: 1rem;
@@ -109,7 +109,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     background-color: rgba(0, 0, 0, 0.6);
 }
 
