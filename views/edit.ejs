@@ -4,24 +4,31 @@
 <body>
     <header>
         <h1>Vino Italiano</h1>
+        <nav class="flex-nav">
+            <a class="nav-list-item" href="/vino-italiano">Home</a>
+            <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
+            <a class="nav-list-item" href="/vino-italiano/<%=foundWine._id%>">Back to <%=foundWine.varietal%></a>
+        </nav>
     </header>
-    <nav>
-        <a href="/vino-italiano">Home</a>
-        <a href="/vino-italiano/shades">Vino</a>
-        <a href="/vino-italiano/<%=foundWine._id%>">Back to <%=foundWine.varietal%></a>
-    </nav>
-
-    <form action="/vino-italiano/<%=foundWine._id%>?_method=PUT" method="POST">
-        <label>
-            Region:
-            <input type="text" name="region" value="<%=foundWine.region%>"/>
-        </label>
-        <label>
-            Description:
-            <input type="text" name="description" value="<%=foundWine.description%>"/>
-        </label>
-        <input type="submit" value="Submit"/>
-    </form>
+    <div class="edit-wrapper">
+        <div class="edit-form-wrapper">
+            <form action="/vino-italiano/<%=foundWine._id%>?_method=PUT" method="POST">
+                <div class="first-edit">
+                    <label>
+                        Region:
+                        <input type="text" name="region" value="<%=foundWine.region%>"/>
+                    </label>
+                </div>
+                <div class="second-edit">
+                    <label>
+                        Description:
+                        <input type="text" name="description" value="<%=foundWine.description%>"/>
+                    </label>
+                </div>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>

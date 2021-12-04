@@ -239,6 +239,18 @@ input[type=submit]{
     }
 }
 
+.edit-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-form-wrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 footer {
     position: sticky;
     display: flex;
