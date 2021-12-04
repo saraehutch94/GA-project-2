@@ -4,32 +4,47 @@
 <body>
     <header>
         <h1>Vino Italiano</h1>
+        <nav class="flex-nav">
+            <a class="nav-list-item" href="/vino-italiano">Home</a>
+            <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
+            <a class="nav-list-item" href="/vino-italiano/redIndex">Back to Vino Rosso</a>
+        </nav>
     </header>
-    <nav>
-        <a href="/vino-italiano">Home</a>
-        <a href="/vino-italiano/shades">Vino</a>
-        <a href="/vino-italiano/redIndex">Back to Vino Rosso</a>
-    </nav>
-    <h2>New Vino Rosso</h2>
-    <form action="/vino-italiano/redIndex" method="POST">
-        <label>
-            Varietal:
-            <input type="text" name="varietal"/>
-        </label>
-        <label>
-            Region:
-            <input type="text" name="region"/>
-        </label>
-        <label>
-            Description:
-            <input type="text" name="description"/>
-        </label>
-        <label>
-            Image:
-            <input type="text" name="img"/>
-        </label>
-        <input type="submit" value="Submit"/>
-    </form>
+    <div class="new-whole-wrapper">
+        <div class="new-form-wrapper">
+            <div class="new-title"><h2>New Vino Rosso</h2></div>
+            <form action="/vino-italiano/redIndex" method="POST">
+                <div class="new-form-flex">
+                    <div>
+                        <label>
+                            Varietal:
+                            <input type="text" name="varietal"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Region:
+                            <input type="text" name="region"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Description:
+                            <input type="text" name="description"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Image:
+                            <input type="text" name="img"/>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit"/>
+                    </div>
+            </form>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>

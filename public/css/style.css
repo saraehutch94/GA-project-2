@@ -143,6 +143,7 @@ h1 {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -300,6 +301,32 @@ input[type=submit]{
 
 .edit-submit-button:hover {
     background-color:rgba(0, 0, 0, 0.3);
+}
+
+.new-whole-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-form-wrapper {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.new-title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.new-form-flex {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
