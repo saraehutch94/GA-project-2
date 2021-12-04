@@ -248,7 +248,26 @@ input[type=submit]{
 }
 
 .edit-form-wrapper {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.edit-input {
+    font-size: 20px;
+    font-family: 'Fauna One', serif;
+}
+
+.edit-form-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 footer {
