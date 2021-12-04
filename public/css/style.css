@@ -28,6 +28,7 @@ h1 {
 .flex-nav {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 
 .nav-list-item {
@@ -248,7 +249,12 @@ footer {
     color: white;
 }
 
-.footer-div {
-    margin-top: 10px;
-    margin-bottom: 25px;
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.github-icon {
+    margin-right: 10px;
 }
