@@ -15,20 +15,20 @@
             <div class="edit-title">Edit <%=foundWine.varietal%></div>
             <form action="/vino-italiano/<%=foundWine._id%>?_method=PUT" method="POST">
                 <div class="edit-form-flex">
-                    <div class="edit-item">
-                        <label>
-                            Region:
+                    <div>
+                        <label class="edit-section">
+                            <p>Region:</p>
                             <input class="edit-input" type="text" name="region" value="<%=foundWine.region%>"/>
                         </label>
                     </div>
-                    <div class="edit-item">
-                        <label>
-                            Description:
-                            <input class="edit-input" type="text" name="description" value="<%=foundWine.description%>"/>
+                    <div>
+                        <label class="edit-section">
+                            <p>Description:</p>
+                            <textarea class="edit-input-description" name="description" rows="4" cols="30"><%=foundWine.description%></textarea>
                         </label>
                     </div>
-                    <div class="edit-item">
-                        <input type="submit" value="Submit"/>
+                    <div class="edit-submit">
+                        <input class="edit-submit-button" type="submit" value="Submit"/>
                     </div>
                 </form>
         </div>

@@ -264,10 +264,42 @@ input[type=submit]{
     flex-direction: column;
 }
 
+.edit-section {
+    display: flex;
+    flex-direction: column;
+}
+
 .edit-title {
     font-size: 25px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.edit-input-description {
+    font-size: 20px;
+    font-family: 'Fauna One', serif;
+}
+
+.edit-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.edit-submit-button {
+    color: white;
+    padding: 20px;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    border-top: 1px solid #ccccccc0;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #ccccccc0;
+    font-size: 15px;
+}
+
+.edit-submit-button:hover {
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 footer {
