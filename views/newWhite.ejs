@@ -4,32 +4,47 @@
 <body>
     <header>
         <h1>Vino Italiano</h1>
+        <nav class="flex-nav">
+            <a class="nav-list-item" href="/vino-italiano">Home</a>
+            <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
+            <a class="nav-list-item" href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
+        </nav>
     </header>
-    <nav>
-        <a href="/vino-italiano">Home</a>
-        <a href="/vino-italiano/shades">Vino</a>
-        <a href="/vino-italiano/whiteIndex">Back to Vino Bianco</a>
-    </nav>
-    <h2>New Vino Bianco</h2>
-    <form action="/vino-italiano/whiteIndex" method="POST">
-        <label>
-            Varietal:
-            <input type="text" name="varietal"/>
-        </label>
-        <label>
-            Region:
-            <input type="text" name="region"/>
-        </label>
-        <label>
-            Description:
-            <input type="text" name="description"/>
-        </label>
-        <label>
-            Image:
-            <input type="text" name="img"/>
-        </label>
-        <input type="submit" value="Submit"/>
-    </form>
+    <div class="new-whole-wrapper">
+        <div class="new-form-wrapper">
+            <h2 class="new-title">New Vino Bianco</h2>
+            <form action="/vino-italiano/whiteIndex" method="POST">
+                <div class="new-form-flex">
+                    <div>
+                        <label class="new-section">
+                            <p>Varietal:</p>
+                            <input class="edit-input" type="text" name="varietal"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="new-section">
+                            <p>Region:</p>
+                            <input class="edit-input" type="text" name="region"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="new-section">
+                            <p>Description:</p>
+                            <textarea class="edit-input-description" name="description" rows="4" cols="30"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="new-section">
+                            <p>Image:</p>
+                            <input class="edit-input" type="text" name="img"/>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit"/>
+                    </div>
+            </form>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>
