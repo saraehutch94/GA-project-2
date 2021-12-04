@@ -150,8 +150,14 @@ h1 {
     flex-direction: column;
 }
 
-.show-img {
+.show-img-box {
     margin-right: 40px;
+}
+
+.show-img {
+    border: 2px solid white;
+    width: 100%;
+    height: auto;
 }
 
 .detail-box {
@@ -163,6 +169,7 @@ h1 {
 
 .button-wrapper {
     display: flex;
+    align-items: center;
 }
 
 .edit-button {
@@ -177,7 +184,7 @@ h1 {
 }
 
 .edit-button:hover {
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 .edit-button-text {
@@ -198,11 +205,37 @@ h1 {
 }
 
 .delete-button:hover {
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 input[type=submit]{
     font-family: 'Fauna One', serif;
+}
+
+@media only screen and (max-width: 1060px) {
+    .show-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .show-img-box {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .flex-nav {
+        margin-bottom: 20px;
+    }
+    .detail-box {
+        text-align: center;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .show-img {
+        width: 279px;
+        height: 372px;
+    }
 }
 
 footer {
