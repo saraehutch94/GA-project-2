@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const wineController = require("./controllers/wines");
 const morgan = require("morgan");
 const session = require("express-session");
+const userController = require("./controllers/users");
 
 // Initialize the application
 
@@ -64,6 +65,7 @@ app.use(session({
 
 // Mount router middleware
 app.use("/vino-italiano", wineController);
+app.use("/vino-italiano", userController);
 
 // Tell app to listen for requests from client/browser
 
