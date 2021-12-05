@@ -4,6 +4,7 @@ const express = require("express");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const wineController = require("./controllers/wines");
+const morgan = require("morgan");
 
 // Initialize the application
 
@@ -49,6 +50,9 @@ app.use(express.static("public"));
 
 // method-override middleware
 app.use(methodOverride("_method"));
+
+// morgan middleware
+app.use(morgan("dev"));
 
 // Mount router middleware
 app.use("/vino-italiano", wineController);
