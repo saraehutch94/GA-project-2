@@ -52,7 +52,10 @@ wineRouter.get("/whiteIndex", (req, res) => {
 
 // new red route
 wineRouter.get("/redIndex/new", (req, res) => {
-    res.render("newRed.ejs", {tabTitle: "New Vino Rosso"});
+    res.render("newRed.ejs", {
+        tabTitle: "New Vino Rosso",
+        imageError: "",
+    });
 });
 
 // new white route
@@ -89,10 +92,18 @@ wineRouter.put("/:id", (req, res) => {
 // create red route
 wineRouter.post("/redIndex", (req, res) => {
     req.body.shade = "Red";
+    const imageError = "Please enter an image with a .jpg or .png path"
 
-    Wine.create(req.body, (error, newRed) => {
-        res.redirect("/vino-italiano/redIndex");
-    });
+    if (req.body.img.includes("jpg", "png")) {
+        Wine.create(req.body, (error, newRed) => {
+            res.redirect("/vino-italiano/redIndex");
+        });
+    } else {
+        res.render("newRed.ejs", {
+            imageError: imageError,
+            tabTitle: "New Vino Rosso"
+        });
+    }
 });
 
 // create white route
