@@ -11,7 +11,9 @@ usersRouter.get("/login", (req, res) => {
 
 // render signup page
 usersRouter.get("/signup", (req, res) => {
-    res.render("signup.ejs");
+    res.render("signup.ejs", {
+        tabTitle: "Signup"
+    });
 });
 
 // logout route

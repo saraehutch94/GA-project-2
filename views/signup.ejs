@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("./partials/head.ejs")%>
+<body>
+    <h1>Vino Italiano</h1>
+    <form action="/vino-italiano/signup" method="POST">
+        <label>
+            First name:
+            <input type="text" name="firstName"/>
+        </label>
+        <label>
+            Last name:
+            <input type="text" name="lastName"/>
+        </label>
+        <label>
+            Email:
+            <input type="email" name="email"/>
+        </label>
+        <label>
+            Password:
+            <input type="password" name="password"/>
+        </label>
+        <input type="submit" value="Signup"/>
+    </form>
+</body>
+</html>
