@@ -76,7 +76,7 @@ Vino Italiano is a full CRUD application that gives the visitor a virtual Italia
 
 ## Getting Started
 
-Vino Italiano hosted on Heroku: 
+![Vino Italiano hosted on Heroku](https://vino-italiano.herokuapp.com/vino-italiano)
 
 
 ## Next Steps
