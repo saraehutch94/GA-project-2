@@ -1,6 +1,7 @@
 // Require dependencies, create router/controller object
 
 const usersRouter = require("express").Router();
+const User = require("../models/user");
 
 // List router actions
 
