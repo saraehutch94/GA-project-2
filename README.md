@@ -20,9 +20,10 @@
 * HTML
 * CSS
 * JavaScript
-* ejs templates
-* ejs partials
-* scriptlets/template tags
+* EJS templates
+* EJS partials
+* Scriptlets/Template tags
+* Google Fonts
 
 
 ## Screenshots
