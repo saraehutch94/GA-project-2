@@ -334,6 +334,12 @@ input[type=submit]{
     flex-direction: column;
 }
 
+.image-error {
+    font-size: 15px;
+    color: red;
+    padding-bottom: 20px;
+}
+
 footer {
     position: sticky;
     display: flex;

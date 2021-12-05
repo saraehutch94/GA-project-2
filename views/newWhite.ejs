@@ -17,25 +17,28 @@
                 <div class="new-form-flex">
                     <div>
                         <label class="new-section">
-                            <p>Varietal:</p>
+                            <p>Varietal</p>
                             <input class="edit-input" type="text" name="varietal"/>
                         </label>
                     </div>
                     <div>
                         <label class="new-section">
-                            <p>Region:</p>
+                            <p>Region</p>
                             <input class="edit-input" type="text" name="region"/>
                         </label>
                     </div>
                     <div>
                         <label class="new-section">
-                            <p>Description:</p>
+                            <p>Description</p>
                             <textarea class="edit-input-description" name="description" rows="4" cols="30"></textarea>
                         </label>
                     </div>
                     <div>
                         <label class="new-section">
-                            <p>Image:</p>
+                            <p>Image</p>
+                            <% if (imageError.includes("Please")) { %>
+                                <span class="image-error"><%=imageError%></span>
+                            <% } %>
                             <input class="edit-input" type="text" name="img"/>
                         </label>
                     </div>
