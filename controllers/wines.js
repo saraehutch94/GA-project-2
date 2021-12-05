@@ -50,7 +50,7 @@ wineRouter.get("/whiteIndex", (req, res) => {
     });
 });
 
-// new red route
+// new red route`
 wineRouter.get("/redIndex/new", (req, res) => {
     res.render("newRed.ejs", {
         tabTitle: "New Vino Rosso",
