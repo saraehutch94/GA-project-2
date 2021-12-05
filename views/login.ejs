@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("./partials/head.ejs")%>
+<body>
+    <h1>Vino Italiano</h1>
+    <form action="/vino-italiano/login" method="POST">
+        <label>
+            Email:
+            <input type="email" name="email"/>
+        </label>
+        <label>
+            Password:
+            <input type="password" name="password"/>
+        </label>
+        <input type="submit" value="Login"/>
+    </form>
+    <%- include("./partials/footer.ejs")%>
+</body>
+</html>
