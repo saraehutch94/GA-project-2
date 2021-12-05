@@ -1,6 +1,6 @@
 # Vino Italiano
 
-Vino Italiano is a full CRUD application that gives the visitor a virtual Italian wine shop experience. This application allows a visitor to view the most popular Italian wines on the market, including both red and white shades. On Vino Italiano, the visitor can:
+**Vino Italiano** is a full CRUD application that gives the visitor a virtual Italian wine shop experience. This application allows a visitor to view the most popular Italian wines on the market, including both red and white shades. On Vino Italiano, the visitor can:
 * Hit a landing page with a description of the application
 * Choose whether they would like to view red or white wines
 * View all of the wines available on Vino Italiano in the preferred shade
