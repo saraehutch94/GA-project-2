@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const wineController = require("./controllers/wines");
 const morgan = require("morgan");
+const session = require("express-session");
 
 // Initialize the application
 
@@ -53,6 +54,13 @@ app.use(methodOverride("_method"));
 
 // morgan middleware
 app.use(morgan("dev"));
+
+// session middleware
+app.use(session({ 
+    secret: SECRET,
+    resave: false,
+    saveUninitialized: false,
+ }));
 
 // Mount router middleware
 app.use("/vino-italiano", wineController);
