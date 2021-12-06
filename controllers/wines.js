@@ -24,7 +24,7 @@ wineRouter.get("/seed", (req, res) => {
 wineRouter.get("/search", async (req, res) => {
     let term = req.query.term;
     if(term) {
-        const results = await Wine.find({ varietal: { term } });
+        const results = await Wine.find({ varietal: { $regex: term }});
         res.json({ results });
     } else {
         res.render("search.ejs", {tabTitle: "Search"});
@@ -43,7 +43,7 @@ wineRouter.get("/shades", (req, res) => {
 
 // red wine (index) route
 wineRouter.get("/redIndex", (req, res) => {
-    Wine.find({shade: "red"}, (error, allReds) => {
+    Wine.find({shade: "Red"}, (error, allReds) => {
         res.render("redIndex.ejs", {
             allReds,
             tabTitle: "Vino Rosso",
@@ -53,7 +53,7 @@ wineRouter.get("/redIndex", (req, res) => {
 
 // white wine (index) route
 wineRouter.get("/whiteIndex", (req, res) => {
-    Wine.find({shade: "white"}, (error, allWhites) => {
+    Wine.find({shade: "White"}, (error, allWhites) => {
         res.render("whiteIndex.ejs", {
             allWhites,
             tabTitle: "Vino Bianco",
