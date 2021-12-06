@@ -14,5 +14,17 @@
     <h2>Vino Search</h2>
     <input type="text">
     <button>Search</button>
+    <%- include("./partials/footer.ejs")%>
+    <script>
+        const buttonElement = document.querySelector("button");
+        const inputElement = document.querySelector("input");
+
+        buttonElement.addEventListener("click", handleClick);
+
+        async function handleClick() {
+            const searchTerm = inputElement.value;
+            const response = await fetch("/vino-italiano/search?term=" + searchTerm);
+        }
+    </script>
 </body>
 </html>
