@@ -3,9 +3,11 @@ const inputElement = document.querySelector("input");
 const ulElement = document.querySelector("ul");
 
 buttonElement.addEventListener("click", handleClick);
+inputElement.addEventListener("focus", handleReset);
 
 async function handleClick() {
     const searchTerm = inputElement.value;
+    if (!searchTerm) return alert("Please enter valid search term");
     const response = await fetch("/vino-italiano/search?term=" + searchTerm);
     const data = await response.json();
 
@@ -18,5 +20,9 @@ async function handleClick() {
     }).join("");
 
     ulElement.innerHTML = list;
+    inputElement.value = "";
+};
 
+function handleReset() {
+    ulElement.innerHTML = "";
 };
