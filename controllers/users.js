@@ -41,6 +41,7 @@ usersRouter.get("/logout", (req, res) => {
 
 usersRouter.get("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
+    res.render("dashboard.ejs");
 });
 
 module.exports = usersRouter;
