@@ -22,7 +22,12 @@ wineRouter.get("/seed", (req, res) => {
 
 // search route
 wineRouter.get("/search", (req, res) => {
-    res.render("search.ejs", {tabTitle: "Search"});
+    const term = req.query.term;
+    if(term) {
+        res.json({ term });
+    } else {
+        res.render("search.ejs", {tabTitle: "Search"});
+    }
 });
 
 // landing page route

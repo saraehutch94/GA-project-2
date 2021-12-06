@@ -24,6 +24,8 @@
         async function handleClick() {
             const searchTerm = inputElement.value;
             const response = await fetch("/vino-italiano/search?term=" + searchTerm);
+            const data = await response.json();
+            console.log(data);
         }
     </script>
 </body>
