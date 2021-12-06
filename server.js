@@ -18,11 +18,9 @@ const app = express();
 
 require("dotenv").config();
 
-const PORT = process.env.PORT;
-
 // Database connection
 
-const DATABASE_URL = process.env.DATABASE_URL;
+const { PORT, DATABASE_URL, SECRET } = process.env;
 
 // connect mongoose to database/mongoDB
 mongoose.connect(DATABASE_URL);
@@ -65,7 +63,7 @@ app.use(session({
 
 // Mount router middleware
 app.use("/vino-italiano", wineController);
-app.use("/vino-italiano", userController);
+app.use("/vino-italiano/users", userController);
 
 // Tell app to listen for requests from client/browser
 

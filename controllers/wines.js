@@ -32,11 +32,16 @@ wineRouter.get("/shades", (req, res) => {
 
 // red wine (index) route
 wineRouter.get("/redIndex", (req, res) => {
+    console.log("hit red index route");
     Wine.find({shade: "Red"}, (error, allReds) => {
-        res.render("redIndex.ejs", {
-            allReds,
-            tabTitle: "Vino Rosso",
-        });
+        if(error) {
+            res.send(error.message);
+        } else {
+            res.render("redIndex.ejs", {
+                allReds,
+                tabTitle: "Vino Rosso",
+            });
+        }
     });
 });
 
@@ -66,8 +71,6 @@ wineRouter.get("/whiteIndex/new", (req, res) => {
     });
 });
 
-// dev branch comment
-
 // delete route
 wineRouter.delete("/:id", (req, res) => {
     Wine.findByIdAndDelete(req.params.id, (error, deletedWine) => {
@@ -94,18 +97,10 @@ wineRouter.put("/:id", (req, res) => {
 // create red route
 wineRouter.post("/redIndex", (req, res) => {
     req.body.shade = "Red";
-    const imageError = "Please enter an image with a .jpg or .png path"
 
-    if (req.body.img.includes("jpg", "png")) {
-        Wine.create(req.body, (error, newRed) => {
-            res.redirect("/vino-italiano/redIndex");
-        });
-    } else {
-        res.render("newRed.ejs", {
-            imageError: imageError,
-            tabTitle: "New Vino Rosso"
-        });
-    }
+    Wine.create(req.body, (error, newRed) => {
+        res.redirect("/vino-italiano/redIndex");
+    });
 });
 
 // create white route
@@ -138,6 +133,7 @@ wineRouter.get("/:id/edit", (req, res) => {
 // show route
 wineRouter.get("/:id", (req, res) => {
     Wine.findById(req.params.id, (error, foundWine) => {
+        console.log("This is our found wine: ", foundWine);
         res.render("show.ejs", {
             foundWine,
             tabTitle: foundWine.varietal,
