@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include("./partials/head.ejs")%>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Lobster+Two&display=swap" rel="stylesheet">
+    <script defer src="/js/search.js"></script>
+    <title><%= tabTitle %> | Vino Italiano</title>
+</head>
 <body>
     <header>
         <h1>Vino Italiano</h1>
@@ -20,29 +30,5 @@
     </ul>
 
     <%- include("./partials/footer.ejs")%>
-    <script>
-        const buttonElement = document.querySelector("button");
-        const inputElement = document.querySelector("input");
-        const ulElement = document.querySelector("ul");
-
-        buttonElement.addEventListener("click", handleClick);
-
-        async function handleClick() {
-            const searchTerm = inputElement.value;
-            const response = await fetch("/vino-italiano/search?term=" + searchTerm);
-            const data = await response.json();
-
-            const list = data.results.map(wine => {
-                return `<li>
-                            <a href="/vino-italiano/${wine._id}">
-                                ${wine.varietal}
-                            </a>
-                        </li>`
-            }).join("");
-
-            ulElement.innerHTML = list;
-
-        }
-    </script>
 </body>
 </html>
