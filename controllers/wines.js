@@ -21,10 +21,11 @@ wineRouter.get("/seed", (req, res) => {
 });
 
 // search route
-wineRouter.get("/search", (req, res) => {
-    const term = req.query.term;
+wineRouter.get("/search", async (req, res) => {
+    let term = req.query.term;
     if(term) {
-        res.json({ term });
+        const results = await Wine.find({ varietal: { term } });
+        res.json({ results });
     } else {
         res.render("search.ejs", {tabTitle: "Search"});
     }
