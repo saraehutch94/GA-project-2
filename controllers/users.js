@@ -11,13 +11,21 @@ const SALT_ROUNDS = 10;
 // render login page
 usersRouter.get("/login", (req, res) => {
     res.render("login.ejs", {
-        tabTitle: "Login"
+        tabTitle: "Login",
+        error: "",
     });
 });
 
 // log user in
 usersRouter.post("/login", (req, res) => {
-    
+    User.findOne({ email: req.body.email }, (error, foundUser) => {
+        if(!foundUser) return res.render("login.ejs", {error: "Invalid credentials, please try again"});
+        if(!bcrypt.compareSync(req.body.password, user.password)) {
+            return res.render("login.ejs", {error: "Invalid credentials, please try again"});
+        }
+        req.session.user = user._id;
+        res.redirect("/vino-italiano/users/dashboard");
+    });
 });
 
 // render signup page
