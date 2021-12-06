@@ -29,7 +29,6 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    flex-wrap: wrap;
 }
 
 .nav-list-item {
@@ -127,6 +126,10 @@ h1 {
 
 .ind-wine:hover {
     background-color:rgba(0, 0, 0, 0.5);
+}
+
+.uppercase-word {
+    text-transform: capitalize;
 }
 
 .wine-name-index {
@@ -339,6 +342,11 @@ input[type=submit]{
     font-size: 15px;
     color: red;
     padding-bottom: 20px;
+}
+
+.no-bullet-list {
+    list-style-type: none;
+    padding: 0;
 }
 
 footer {

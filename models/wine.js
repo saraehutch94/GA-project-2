@@ -7,8 +7,8 @@ const Schema = mongoose.Schema;
 
 const wineSchema = new Schema(
     {
-        varietal: {type: String, required: true},
-        region: String,
+        varietal: {type: String, required: true, lowercase: true},
+        region: {type: String, lowercase: true},
         shade: {type: String, required: true, lowercase: true},
         description: {type: String, required: true},
         img: String,

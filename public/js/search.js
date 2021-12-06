@@ -7,15 +7,15 @@ inputElement.addEventListener("focus", handleReset);
 
 async function handleClick() {
     const searchTerm = inputElement.value;
-    if (!searchTerm) return alert("Please enter a search term.");
+    if (!searchTerm) return ulElement.innerHTML = "<li style='color: red;'>Please enter a search term</li>"
     const response = await fetch("/vino-italiano/search?term=" + searchTerm);
     const data = await response.json();
 
     if(data.results.length === 0) {
-        ulElement.innerHTML = `<li>No Search Results</li>`
+        ulElement.innerHTML = `<li style="color: red;">No Search Results</li>`
     } else {
         const list = data.results.map(wine => {
-            return `<li>
+            return `<li class="uppercase-word">
                         <a href="/vino-italiano/${wine._id}">
                             ${wine.varietal}
                         </a>
