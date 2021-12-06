@@ -25,7 +25,11 @@ usersRouter.get("/signup", (req, res) => {
 // sign user up
 usersRouter.post("/signup", (req, res) => {
     const hash = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS));
-    res.send(hash);
+    req.body.password = hash;
+    User.create(req.body, (error, user) => {
+        req.session.user = user._id;
+        res.redirect("/vino-italiano/users/dashboard");
+    });
 });
 
 // logout route
@@ -34,5 +38,7 @@ usersRouter.get("/logout", (req, res) => {
         res.redirect("/vino-italiano");
     });
 });
+
+
 
 module.exports = usersRouter;
