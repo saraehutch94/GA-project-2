@@ -58,6 +58,7 @@ usersRouter.get("/logout", (req, res) => {
     });
 });
 
+// dashboard route
 usersRouter.get("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
     User.findById(req.session.user, (error, user) => {
