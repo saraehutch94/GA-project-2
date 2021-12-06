@@ -27,6 +27,7 @@ h1 {
 
 .flex-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 20px;
 }
@@ -35,7 +36,7 @@ h1 {
     color: white;
     text-decoration: none;
     border-bottom: 3px solid #fff3;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .nav-list-item:hover {

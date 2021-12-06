@@ -2,7 +2,14 @@
 <html lang="en">
     <%-include("./partials/head.ejs")%>
 <body>
-    <h1>Vino Italiano</h1>
+    <header>
+        <h1>Vino Italiano</h1>
+        <nav class="flex-nav">
+            <a class="nav-list-item" href="/vino-italiano">Home</a>
+            <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
+            <a class='nav-list-item' href="/vino-italiano/search">Search</a>
+        </nav>
+    </header>
     <form action="/vino-italiano/users/signup" method="POST">
         <label>
             First name:
