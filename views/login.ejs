@@ -5,7 +5,11 @@
     <header>
         <h1>Vino Italiano</h1>
     </header>
-    <form action="/vino-italiano/login" method="POST">
+    <p>Login:</p>
+    <% if(error) { %>
+        <p style="color: red; text-transform: capitalize;"><%=error%></p>
+    <% } %>
+    <form action="/vino-italiano/users/login" method="POST">
         <label>
             Email:
             <input type="email" name="email"/>

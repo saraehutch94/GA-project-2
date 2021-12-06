@@ -19,11 +19,17 @@ usersRouter.get("/login", (req, res) => {
 // log user in
 usersRouter.post("/login", (req, res) => {
     User.findOne({ email: req.body.email }, (error, foundUser) => {
-        if(!foundUser) return res.render("login.ejs", {error: "Invalid credentials, please try again"});
-        if(!bcrypt.compareSync(req.body.password, user.password)) {
-            return res.render("login.ejs", {error: "Invalid credentials, please try again"});
+        if(!foundUser) return res.render("login.ejs", {
+            error: "Invalid credentials, please try again",
+            tabTitle: "Login"
+        });
+        if(!bcrypt.compareSync(req.body.password, foundUser.password)) {
+            return res.render("login.ejs", {
+                error: "Invalid credentials, please try again",
+                tabTitle: "Login"
+            });
         }
-        req.session.user = user._id;
+        req.session.user = foundUser._id;
         res.redirect("/vino-italiano/users/dashboard");
     });
 });
