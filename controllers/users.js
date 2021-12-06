@@ -15,6 +15,11 @@ usersRouter.get("/login", (req, res) => {
     });
 });
 
+// log user in
+usersRouter.post("/login", (req, res) => {
+    
+});
+
 // render signup page
 usersRouter.get("/signup", (req, res) => {
     res.render("signup.ejs", {
