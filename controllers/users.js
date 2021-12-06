@@ -23,8 +23,9 @@ usersRouter.get("/signup", (req, res) => {
 });
 
 // sign user up
-usersRouter.post("signup", (req, res) => {
-
+usersRouter.post("/signup", (req, res) => {
+    const hash = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS));
+    res.send(hash);
 });
 
 // logout route
