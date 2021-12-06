@@ -3,6 +3,9 @@
 const usersRouter = require("express").Router();
 const User = require("../models/user");
 
+const bcrypt = require("bcrypt");
+const SALT_ROUNDS = 10;
+
 // List router actions
 
 // render login page
@@ -17,6 +20,11 @@ usersRouter.get("/signup", (req, res) => {
     res.render("signup.ejs", {
         tabTitle: "Signup"
     });
+});
+
+// sign user up
+usersRouter.post("signup", (req, res) => {
+
 });
 
 // logout route
