@@ -20,6 +20,11 @@ wineRouter.get("/seed", (req, res) => {
     });
 });
 
+// search route
+wineRouter.get("/search", (req, res) => {
+    res.render("search.ejs", {tabTitle: "Search"});
+});
+
 // landing page route
 wineRouter.get("/", (req, res) => {
     res.render("landing.ejs", {tabTitle: "Home"});
