@@ -43,7 +43,7 @@ wineRouter.get("/shades", (req, res) => {
 
 // red wine (index) route
 wineRouter.get("/redIndex", (req, res) => {
-    Wine.find({shade: "Red"}, (error, allReds) => {
+    Wine.find({shade: "red"}, (error, allReds) => {
         res.render("redIndex.ejs", {
             allReds,
             tabTitle: "Vino Rosso",
@@ -53,7 +53,7 @@ wineRouter.get("/redIndex", (req, res) => {
 
 // white wine (index) route
 wineRouter.get("/whiteIndex", (req, res) => {
-    Wine.find({shade: "White"}, (error, allWhites) => {
+    Wine.find({shade: "white"}, (error, allWhites) => {
         res.render("whiteIndex.ejs", {
             allWhites,
             tabTitle: "Vino Bianco",
