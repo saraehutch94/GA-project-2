@@ -42,7 +42,10 @@ usersRouter.get("/logout", (req, res) => {
 usersRouter.get("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
     User.findById(req.session.user, (error, user) => {
-        res.render("dashboard.ejs", {user});
+        res.render("dashboard.ejs", {
+            user,
+            tabTitle: "Dashboard"
+        });
     });
 });
 

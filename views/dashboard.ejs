@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("./partials/head.ejs")%>
+<body>
+    <header>
+        <h1>Welcome, <%=user.firstName%>!</h1>
+        <nav class="flex-nav">
+            <a class="nav-list-item" href="/vino-italiano">Home</a>
+            <a class="nav-list-item" href="/vino-italiano/users/logout">Logout</a>
+        </nav>
+    </header>
+</body>
+</html>
