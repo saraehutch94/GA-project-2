@@ -219,32 +219,6 @@ input[type=submit]{
     font-family: 'Fauna One', serif;
 }
 
-@media only screen and (max-width: 908px) {
-    .show-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-    .show-img-box {
-        margin-right: 0px;
-        margin-bottom: 20px;
-    }
-    .flex-nav {
-        margin-bottom: 20px;
-    }
-    .detail-box {
-        text-align: center;
-    }
-    .button-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .show-img {
-        width: 279px;
-        height: 372px;
-    }
-}
-
 .edit-wrapper {
     display: flex;
     flex-direction: column;
@@ -350,6 +324,14 @@ input[type=submit]{
     padding: 0;
 }
 
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     position: sticky;
     display: flex;
@@ -368,4 +350,30 @@ footer {
 
 .github-icon {
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 908px) {
+    .show-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .show-img-box {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .flex-nav {
+        margin-bottom: 20px;
+    }
+    .detail-box {
+        text-align: center;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .show-img {
+        width: 279px;
+        height: 372px;
+    }
 }
