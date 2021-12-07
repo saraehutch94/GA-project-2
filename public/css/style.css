@@ -432,6 +432,26 @@ input[type=submit]{
     background-color:rgba(0, 0, 0, 0.3);
 }
 
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form-wrapper {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px 40px 40px;
+}
+
+.signup-title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 footer {
     position: sticky;
     display: flex;

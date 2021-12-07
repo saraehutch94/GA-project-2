@@ -10,25 +10,30 @@
             <a class='nav-list-item' href="/vino-italiano/search">Search</a>
         </nav>
     </header>
-    <form action="/vino-italiano/users/signup" method="POST">
-        <label>
-            First name:
-            <input type="text" name="firstName"/>
-        </label>
-        <label>
-            Last name:
-            <input type="text" name="lastName"/>
-        </label>
-        <label>
-            Email:
-            <input type="email" name="email"/>
-        </label>
-        <label>
-            Password:
-            <input type="password" name="password"/>
-        </label>
-        <input type="submit" value="Signup"/>
-    </form>
+    <div class="signup-wrapper">
+        <div class="signup-form-wrapper">
+            <h2 class="signup-title">Signup</h2>
+            <form action="/vino-italiano/users/signup" method="POST">
+                <label>
+                    First name:
+                    <input type="text" name="firstName"/>
+                </label>
+                <label>
+                    Last name:
+                    <input type="text" name="lastName"/>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email"/>
+                </label>
+                <label>
+                    Password:
+                    <input type="password" name="password"/>
+                </label>
+                <input type="submit" value="Signup"/>
+            </form>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>
