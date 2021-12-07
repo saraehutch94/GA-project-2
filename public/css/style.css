@@ -441,6 +441,7 @@ input[type=submit]{
 }
 
 .signup-form-wrapper {
+    font-size: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px 40px 40px 40px;
@@ -450,6 +451,43 @@ input[type=submit]{
     font-size: 25px;
     text-align: center;
     margin-bottom: 15px;
+}
+
+.signup-form-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-input {
+    font-family: 'Fauna One', serif;
+    font-size: 18px;
+}
+
+.signup-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.signup-button {
+    color: white;
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    border-top: 1px solid #ccccccc0;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #ccccccc0;
+    font-size: 18px;
+}
+
+.signup-button:hover {
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 footer {

@@ -14,23 +14,35 @@
         <div class="signup-form-wrapper">
             <h2 class="signup-title">Signup</h2>
             <form action="/vino-italiano/users/signup" method="POST">
-                <label>
-                    First name:
-                    <input type="text" name="firstName"/>
-                </label>
-                <label>
-                    Last name:
-                    <input type="text" name="lastName"/>
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="email"/>
-                </label>
-                <label>
-                    Password:
-                    <input type="password" name="password"/>
-                </label>
-                <input type="submit" value="Signup"/>
+                <div class="signup-form-flex">
+                    <div>
+                        <label class="signup-section">
+                            <p>First name</p>
+                            <input class="signup-input" type="text" name="firstName"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="signup-section">
+                            <p>Last name</p>
+                            <input class="signup-input" type="text" name="lastName"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="signup-section">
+                            <p>Email</p>
+                            <input class="signup-input" type="email" name="email"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="signup-section">
+                            <p>Password</p>
+                            <input class="signup-input" type="password" name="password"/>
+                        </label>
+                    </div>
+                    <div class="signup-submit">
+                        <input class="signup-button" type="submit" value="Signup"/>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
