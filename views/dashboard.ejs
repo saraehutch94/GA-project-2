@@ -3,13 +3,19 @@
     <%-include("./partials/head.ejs")%>
 <body>
     <header>
-        <h1>Welcome, <%=user.firstName%>!</h1>
+        <h1>Vino Italiano</h1>
         <nav class="flex-nav">
             <a class="nav-list-item" href="/vino-italiano">Home</a>
             <a class='nav-list-item' href="/vino-italiano/search">Search</a>
             <a class="nav-list-item" href="/vino-italiano/users/logout">Logout</a>
         </nav>
     </header>
-    <p>Your email is <%=user.email%></p>
+    <div class="dashboard-wrapper">
+        <div class="dashboard-second-wrapper">
+            <h2 class="dashboard-title">Welcome, <%=user.firstName%>!</h2>
+            <p>The email you provided to us is <span class="user-email"><%=user.email%></span></p>
+        </div>
+    </div>
+    <%- include("./partials/footer.ejs")%>
 </body>
 </html>

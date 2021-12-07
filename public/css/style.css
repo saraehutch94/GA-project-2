@@ -490,6 +490,30 @@ input[type=submit]{
     background-color:rgba(0, 0, 0, 0.3);
 }
 
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-second-wrapper {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px 40px 40px;
+}
+
+.dashboard-title {
+    text-align: center;
+}
+
+.user-email {
+    color: #ff7300;
+    font-weight: bold;
+}
+
 footer {
     position: sticky;
     display: flex;
