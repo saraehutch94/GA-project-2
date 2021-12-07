@@ -8,6 +8,11 @@
             <a class="nav-list-item" href="/vino-italiano">Home</a>
             <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
             <a class='nav-list-item' href="/vino-italiano/search">Search</a>
+            <% if(user) { %>
+                <a class="nav-list-item" href="/vino-italiano/users/logout">Logout</a>
+            <% } else { %>
+                <a class="nav-list-item" href="/vino-italiano/users/login">Login</a>
+            <% } %>
         </nav>
     </header>
     <div class="signup-wrapper">

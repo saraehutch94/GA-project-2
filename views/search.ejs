@@ -16,9 +16,13 @@
         <h1>Vino Italiano</h1>
         <nav class="flex-nav">
             <a class="nav-list-item" href="/vino-italiano">Home</a>
-            <a class="nav-list-item" href="/vino-italiano/users/login">Login</a>
-            <a class="nav-list-item" href="/vino-italiano/users/signup">Signup</a>
-            <a class="nav-list-item" href="/vino-italiano/users/logout">Logout</a>
+            <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
+            <% if(user) { %>
+                <a class="nav-list-item" href="/vino-italiano/users/logout">Logout</a>
+            <% } else { %>
+                <a class="nav-list-item" href="/vino-italiano/users/login">Login</a>
+                <a class="nav-list-item" href="/vino-italiano/users/signup">Signup</a>
+            <% } %>
         </nav>
     </header>
     <div class="search-wrapper">

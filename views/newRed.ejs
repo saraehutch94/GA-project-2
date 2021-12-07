@@ -9,6 +9,12 @@
             <a class="nav-list-item" href="/vino-italiano/shades">Vino</a>
             <a class='nav-list-item' href="/vino-italiano/search">Search</a>
             <a class="nav-list-item" href="/vino-italiano/redIndex">Back to Vino Rosso</a>
+            <% if(user) { %>
+                <a class="nav-list-item" href="/vino-italiano/users/logout">Logout</a>
+            <% } else { %>
+                <a class="nav-list-item" href="/vino-italiano/users/login">Login</a>
+                <a class="nav-list-item" href="/vino-italiano/users/signup">Signup</a>
+            <% } %>
         </nav>
     </header>
     <div class="new-whole-wrapper">
