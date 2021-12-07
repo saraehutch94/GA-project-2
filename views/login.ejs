@@ -11,21 +11,27 @@
             <a class="nav-list-item" href="/vino-italiano/users/signup">Signup</a>
         </nav>
     </header>
-    <p>Login:</p>
-    <% if(error) { %>
-        <p style="color: red; text-transform: capitalize;"><%=error%></p>
-    <% } %>
-    <form action="/vino-italiano/users/login" method="POST">
-        <label>
-            Email:
-            <input type="email" name="email"/>
-        </label>
-        <label>
-            Password:
-            <input type="password" name="password"/>
-        </label>
-        <input type="submit" value="Login"/>
-    </form>
+    <div class="login-wrapper">
+        <div class="login-form-wrapper">
+            <h2 class="login-title">Login</h2>
+            <% if(error) { %>
+                <p style="color: red; text-transform: capitalize;"><%=error%></p>
+            <% } %>
+            <form action="/vino-italiano/users/login" method="POST">
+                <div class="login-form-flex">
+                    <label>
+                        Email:
+                        <input class="login-input" type="email" name="email"/>
+                    </label>
+                    <label>
+                        Password:
+                        <input class="login-input" type="password" name="password"/>
+                    </label>
+                    <input class="login-input" type="submit" value="Login"/>
+                </div>
+            </form>
+        </div>
+    </div>
     <%- include("./partials/footer.ejs")%>
 </body>
 </html>
