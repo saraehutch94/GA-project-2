@@ -324,6 +324,7 @@ input[type=submit]{
 .no-bullet-list {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 .search-wrapper {
@@ -352,6 +353,16 @@ input[type=submit]{
 .search-button {
     font-size: 15px;
     font-family: 'Fauna One', serif;
+}
+
+.search-list-link {
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid #fff3;
+}
+
+.search-list-link:hover {
+    border-bottom-color: #fff9;
 }
 
 footer {

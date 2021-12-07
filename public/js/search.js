@@ -16,7 +16,7 @@ async function handleClick() {
     } else {
         const list = data.results.map(wine => {
             return `<li class="uppercase-word">
-                        <a href="/vino-italiano/${wine._id}">
+                        <a class="search-list-link" href="/vino-italiano/${wine._id}">
                             ${wine.varietal}
                         </a>
                     </li>`
