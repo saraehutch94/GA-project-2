@@ -332,6 +332,10 @@ input[type=submit]{
     justify-content: center;
 }
 
+.search-title {
+    color: white;
+}
+
 footer {
     position: sticky;
     display: flex;
