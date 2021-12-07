@@ -163,7 +163,6 @@ h1 {
 
 .show-img {
     border: 2px solid white;
-    /* width: 100%; */
     height: auto;
 }
 
@@ -390,8 +389,8 @@ input[type=submit]{
 
 .login-form-wrapper {
     color: white;
-    font-size: 20px;
-    padding: 0 20px 20px 20px;
+    font-size: 18px;
+    padding: 20px 40px 40px 40px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -402,7 +401,35 @@ input[type=submit]{
 }
 
 .login-input {
-    font-size: 20px;
+    font-family: 'Fauna One', serif;
+    font-size: 18px;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.login-button {
+    color: white;
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    border-top: 1px solid #ccccccc0;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #ccccccc0;
+    font-size: 18px;
+}
+
+.login-button:hover {
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 footer {

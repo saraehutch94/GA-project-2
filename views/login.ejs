@@ -19,15 +19,21 @@
             <% } %>
             <form action="/vino-italiano/users/login" method="POST">
                 <div class="login-form-flex">
-                    <label>
-                        Email:
-                        <input class="login-input" type="email" name="email"/>
-                    </label>
-                    <label>
-                        Password:
-                        <input class="login-input" type="password" name="password"/>
-                    </label>
-                    <input class="login-input" type="submit" value="Login"/>
+                    <div>
+                        <label class="login-section">
+                            <p>Email:</p>
+                            <input class="login-input" type="email" name="email"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="login-section">
+                            <p>Password:</p>
+                            <input class="login-input" type="password" name="password"/>
+                        </label>
+                    </div>
+                    <div class="login-submit">
+                        <input class="login-input login-button" type="submit" value="Login"/>
+                    </div>
                 </div>
             </form>
         </div>
