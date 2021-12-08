@@ -82,7 +82,7 @@ wineRouter.get("/whiteIndex/new", (req, res) => {
 // delete route
 wineRouter.delete("/:id", (req, res) => {
     Wine.findByIdAndDelete(req.params.id, (error, deletedWine) => {
-        if (deletedWine.shade === "Red") {
+        if (deletedWine.shade === "red") {
             res.redirect("/vino-italiano/redIndex");
         } else {
             res.redirect("/vino-italiano/whiteIndex");
