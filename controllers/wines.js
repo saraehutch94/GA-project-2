@@ -149,9 +149,10 @@ wineRouter.get("/:id/edit", (req, res) => {
 // show route
 wineRouter.get("/:id", (req, res) => {
     Wine.findById(req.params.id, (error, foundWine) => {
+        const foundWineTitle = foundWine.varietal.charAt(0).toUpperCase() + foundWine.varietal.slice(1);
         res.render("show.ejs", {
             foundWine,
-            tabTitle: foundWine.varietal,
+            tabTitle: foundWineTitle,
         });
     });
 });
