@@ -17,6 +17,7 @@
 * express server
 * node.js
 * MVC architecture
+* Bcrypt
 * HTML
 * CSS
 * JavaScript
