@@ -27,7 +27,12 @@
         </div>
         <div class="show-detail-wrapper">
             <div class="detail-box">
-                <h2 class="uppercase-word"><%=foundWine.varietal%></h2>
+
+                <form action="/vino-italiano/users/dashboard" method="POST">
+                    <h2 class="uppercase-word"><%=foundWine.varietal%></h2>
+                    <input type="hidden" value="<%=foundWine.varietal%>"/>
+                </form>
+
                 <p class="uppercase-word"><%=foundWine.region%></p>
                 <p><%=foundWine.description%></p>
                 <div class="button-wrapper">
