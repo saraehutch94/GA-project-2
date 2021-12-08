@@ -29,8 +29,11 @@
             <div class="detail-box">
 
                 <form action="/vino-italiano/users/dashboard" method="POST">
-                    <h2 class="uppercase-word"><%=foundWine.varietal%></h2>
-                    <input type="hidden" value="<%=foundWine.varietal%>"/>
+                    <div class="favorite-form-flex">
+                        <h2 class="uppercase-word center-text"><%=foundWine.varietal%></h2>
+                        <input type="hidden" value="<%=foundWine.varietal%>"/>
+                        <input class="heart-button" type="image" src="https://i.imgur.com/gU2lxAA.png" width="30px" height="30px"/>
+                    </div>
                 </form>
 
                 <p class="uppercase-word"><%=foundWine.region%></p>

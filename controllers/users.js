@@ -69,4 +69,8 @@ usersRouter.get("/dashboard", (req, res) => {
     });
 });
 
+usersRouter.post("/dashboard", (req, res) => {
+    console.log(req.body);
+});
+
 module.exports = usersRouter;
