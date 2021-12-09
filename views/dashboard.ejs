@@ -20,7 +20,11 @@
             <h3>Favorites</h3>
             <div class="favorites">
                 <!-- Favorites will go here -->
-                <% console.log(user.favorites[0].region) %>
+                <% if(user.favorites.length > 0) { %>
+                    <% user.favorites.forEach(favorite => { %>
+                        <%=favorite.varietal%>
+                    <% }) %>
+                <% } %>
             </div>
         </div>
     </div>

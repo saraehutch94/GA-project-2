@@ -60,9 +60,9 @@ usersRouter.get("/logout", (req, res) => {
 });
 
 // dashboard route
-usersRouter.get("/dashboard", (req, res) => {
+usersRouter.get("/dashboard", async (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
-    User.findById(req.session.user, (error, user) => {
+    User.findById(req.session.user).populate("favorites").exec((error, user) => {
         res.render("dashboard.ejs", {
             user,
             tabTitle: "Dashboard"
@@ -70,6 +70,7 @@ usersRouter.get("/dashboard", (req, res) => {
     });
 });
 
+// add favorited wine to specific user's object
 usersRouter.post("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
     User.findById(req.session.user, (error, user) => {
@@ -77,7 +78,7 @@ usersRouter.post("/dashboard", (req, res) => {
             user.favorites.push(wine[0]._id);
             user.save(function() {
                 res.redirect("/vino-italiano/users/dashboard");
-            });
+            })
         });
     });
 });
