@@ -62,12 +62,11 @@ usersRouter.get("/logout", (req, res) => {
 // dashboard route
 usersRouter.get("/dashboard", async (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
-    User.findById(req.session.user).populate("favorites").exec((error, user) => {
+    const user = await User.findById(req.session.user).populate("favorites").exec();
         res.render("dashboard.ejs", {
             user,
             tabTitle: "Dashboard"
         });
-    });
 });
 
 // add favorited wine to specific user's object

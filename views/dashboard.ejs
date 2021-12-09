@@ -20,6 +20,7 @@
             <img src="https://i.imgur.com/gU2lxAA.png" width="30px" height="30px"/>
             <h3 class="favorites-title">Favorites</h3>
             <div class="favorites">
+                <% console.log(user) %>
                 <% if(user.favorites.length > 0) { %>
                     <% user.favorites.forEach(favorite => { %>
                         <div class="uppercase-word favorite-item"><%=favorite.varietal%></div>
