@@ -2,6 +2,7 @@
 
 const usersRouter = require("express").Router();
 const User = require("../models/user");
+const Wine = require("../models/wine");
 
 const bcrypt = require("bcrypt");
 const SALT_ROUNDS = 10;
@@ -70,7 +71,15 @@ usersRouter.get("/dashboard", (req, res) => {
 });
 
 usersRouter.post("/dashboard", (req, res) => {
-    console.log(req.body);
+    if(!req.session.user) return res.redirect("/vino-italiano/users/login");
+    User.findById(req.session.user, (error, user) => {
+        Wine.find({ varietal: req.body.varietal }, (error, wine) => {
+            user.favorites.push(wine[0]._id);
+            user.save(function() {
+                res.redirect("/vino-italiano/users/dashboard");
+            });
+        });
+    });
 });
 
 module.exports = usersRouter;

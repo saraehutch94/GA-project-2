@@ -3,6 +3,7 @@
 const express = require("express");
 const Wine = require("../models/wine");
 const wineSeed = require("../models/wineSeed");
+const User = require("../models/user");
 
 // Create router/controller object
 
@@ -76,8 +77,6 @@ wineRouter.get("/whiteIndex/new", (req, res) => {
         imageError: "",
     });
 });
-
-// dev branch comment
 
 // delete route
 wineRouter.delete("/:id", (req, res) => {
@@ -155,7 +154,6 @@ wineRouter.get("/:id", (req, res) => {
         });
     });
 });
-
 
 // Export router object for use in server.js
 
