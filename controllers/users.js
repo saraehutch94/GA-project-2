@@ -58,8 +58,6 @@ usersRouter.get("/logout", (req, res) => {
     });
 });
 
-// comment to check for new repo pushes
-
 // dashboard route
 usersRouter.get("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
