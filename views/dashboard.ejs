@@ -24,7 +24,7 @@
                     <% user.favorites.forEach(favorite => { %>
                         <a href="/vino-italiano/<%=favorite._id%>" class="uppercase-word favorite-item"><%=favorite.varietal%></a>
                         <form action="/vino-italiano/users/dashboard/<%=favorite._id%>?_method=DELETE" method="POST">
-                            <input type="submit" value="Remove"/>
+                            <input class="favorite-rmv-btn" type="submit" value="Remove"/>
                         </form>
                     <% }) %>
                 <% } %>
