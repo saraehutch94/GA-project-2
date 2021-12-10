@@ -14,16 +14,18 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-second-wrapper">
             <h2 class="dashboard-title">Welcome, <%=user.firstName%>!</h2>
-            <p>The email you provided to us is <span class="user-email"><%=user.email%></span></p>
+            <p class="center-text">The email you provided to us is <span class="user-email"><%=user.email%></span></p>
         </div>
         <div class="dashboard-favorites-wrapper">
             <img src="https://i.imgur.com/gU2lxAA.png" width="30px" height="30px"/>
             <h3 class="favorites-title">Favorites</h3>
             <div class="favorites">
-                <% console.log(user) %>
                 <% if(user.favorites.length > 0) { %>
                     <% user.favorites.forEach(favorite => { %>
                         <div class="uppercase-word favorite-item"><%=favorite.varietal%></div>
+                        <form action="/vino-italiano/users/dashboard/<%=favorite._id%>?_method=DELETE" method="POST">
+                            <input type="submit" value="Remove"/>
+                        </form>
                     <% }) %>
                 <% } %>
             </div>

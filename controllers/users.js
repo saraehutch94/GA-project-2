@@ -60,13 +60,29 @@ usersRouter.get("/logout", (req, res) => {
 });
 
 // dashboard route
-usersRouter.get("/dashboard", async (req, res) => {
+usersRouter.get("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
-    const user = await User.findById(req.session.user).populate("favorites").exec();
+    User.findById(req.session.user).populate("favorites").exec((error, user) => {
         res.render("dashboard.ejs", {
             user,
-            tabTitle: "Dashboard"
+            tabTitle: "Dashboard",
         });
+    });
+});
+
+// delete favorite route
+usersRouter.delete("/dashboard/:id", (req, res) => {
+    User.findById(req.session.user, (error, user) => {
+        const favorites = user.favorites;
+        const foundFavorite = favorites.find((favorite) => {
+            return favorite._id == req.params.id
+        });
+        let index = favorites.indexOf(foundFavorite);
+        favorites.splice(index, 1)
+        user.save(function() {
+            res.redirect("/vino-italiano/users/dashboard");
+        });
+    });
 });
 
 // add favorited wine to specific user's object
