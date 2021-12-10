@@ -28,11 +28,19 @@
         </div>
         <div class="show-detail-wrapper">
             <div class="detail-box">
-                <h2 class="uppercase-word"><%=foundWine.varietal%></h2>
+
+                <form action="/vino-italiano/users/dashboard" method="POST">
+                    <div class="favorite-form-flex">
+                        <h2 class="uppercase-word center-text"><%=foundWine.varietal%></h2>
+                        <input type="hidden" name="varietal" value="<%=foundWine.varietal%>"/>
+                        <input class="heart-button" type="image" src="https://i.imgur.com/gU2lxAA.png" width="30px" height="30px"/>
+                    </div>
+                </form>
+
                 <p class="uppercase-word"><%=foundWine.region%></p>
                 <p><%=foundWine.description%></p>
                 <div class="button-wrapper">
-                    <div><a class="edit-button edit-button-text" href="/vino-italiano/<%=foundWine._id%>/edit">Edit</a></div>
+                    <a class="edit-button edit-button-text" href="/vino-italiano/<%=foundWine._id%>/edit">Edit</a>
                     <form class="inline-form" action="/vino-italiano/<%=foundWine._id%>?_method=DELETE" method="POST">
                         <input class="delete-button inline-input" type="submit" value="Delete"/>
                     </form>

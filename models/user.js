@@ -13,6 +13,7 @@ const userSchema = new Schema({
     lastName: String,
     email: String,
     password: String,
+    favorites: [{ type: Schema.Types.ObjectId, ref: "Wine"}],
 }, { timestamps : true });
 
 module.exports = mongoose.model("User", userSchema);

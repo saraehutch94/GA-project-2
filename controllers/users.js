@@ -2,6 +2,7 @@
 
 const usersRouter = require("express").Router();
 const User = require("../models/user");
+const Wine = require("../models/wine");
 
 const bcrypt = require("bcrypt");
 const SALT_ROUNDS = 10;
@@ -61,10 +62,38 @@ usersRouter.get("/logout", (req, res) => {
 // dashboard route
 usersRouter.get("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
-    User.findById(req.session.user, (error, user) => {
+    User.findById(req.session.user).populate("favorites").exec((error, user) => {
         res.render("dashboard.ejs", {
             user,
-            tabTitle: "Dashboard"
+            tabTitle: "Dashboard",
+        });
+    });
+});
+
+// delete favorite route
+usersRouter.delete("/dashboard/:id", (req, res) => {
+    User.findById(req.session.user, (error, user) => {
+        const favorites = user.favorites;
+        const foundFavorite = favorites.find((favorite) => {
+            return favorite._id == req.params.id
+        });
+        let index = favorites.indexOf(foundFavorite);
+        favorites.splice(index, 1)
+        user.save(function() {
+            res.redirect("/vino-italiano/users/dashboard");
+        });
+    });
+});
+
+// add favorited wine to specific user's object
+usersRouter.post("/dashboard", (req, res) => {
+    if(!req.session.user) return res.redirect("/vino-italiano/users/login");
+    User.findById(req.session.user, (error, user) => {
+        Wine.find({ varietal: req.body.varietal }, (error, wine) => {
+            user.favorites.push(wine[0]._id);
+            user.save(function() {
+                res.redirect("/vino-italiano/users/dashboard");
+            })
         });
     });
 });
