@@ -8,6 +8,9 @@
 * Delete a wine from the application
 * Edit/update a wine's region or description
 * Add a wine to the application, based on it's shade
+* Create an account with Vino Italiano
+* View personal dashboard with account
+* Add specific wines to favorites section on dashboard
 
 
 ## Technologies used
