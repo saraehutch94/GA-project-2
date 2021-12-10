@@ -548,6 +548,15 @@ input[type=submit]{
     flex-direction: column;
     align-items: center;
 }
+.favorite-item {
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid #fff3;
+}
+
+.favorite-item:hover {
+    border-bottom-color: #fff9;
+}
 
 .favorite-item:not(:last-child) {
     margin-bottom: 10px;
