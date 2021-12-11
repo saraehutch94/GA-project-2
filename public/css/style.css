@@ -170,7 +170,6 @@ h1 {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
-    max-height: 350px;
 }
 
 .button-wrapper {
@@ -626,12 +625,10 @@ footer {
         width: 279px;
         height: 372px;
     }
-
     .favorite-form-flex {
         display: flex;
         flex-direction: column;
     }
-
     .heart-button {
         margin: 0 auto;
     }
