@@ -3,7 +3,6 @@
 const express = require("express");
 const Wine = require("../models/wine");
 const wineSeed = require("../models/wineSeed");
-const User = require("../models/user");
 
 // Create router/controller object
 
@@ -155,6 +154,7 @@ wineRouter.get("/:id", (req, res) => {
         });
     });
 });
+
 
 // Export router object for use in server.js
 
