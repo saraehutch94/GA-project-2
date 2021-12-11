@@ -86,4 +86,4 @@
 
 ## Next Steps
 
-**TODO: ADD ICEBOX/NEXT STEPS**
+* Add cart feature - ability for logged-in user to add their favorites to their cart for purchase
