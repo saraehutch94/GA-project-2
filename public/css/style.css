@@ -182,13 +182,9 @@ h1 {
     align-items: center;
 }
 
-.heart-button {
+#heart {
     margin-left: auto;
     filter: brightness(0) invert(1);
-}
-
-.heart-button:hover {
-    filter: none;
 }
 
 .edit-button {
