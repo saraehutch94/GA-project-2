@@ -37,6 +37,7 @@ h1 {
     text-decoration: none;
     border-bottom: 3px solid #fff3;
     font-size: 17px;
+    margin: 0.5rem 1rem;
 }
 
 .nav-list-item:hover {
