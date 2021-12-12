@@ -88,7 +88,6 @@ usersRouter.delete("/dashboard/:id", (req, res) => {
 // add favorited wine to specific user's object
 usersRouter.post("/dashboard", (req, res) => {
     if(!req.session.user) return res.redirect("/vino-italiano/users/login");
-    console.lof(req.session.user);
     User.findById(req.session.user, (error, user) => {
         Wine.find({ varietal: req.body.varietal }, (error, wine) => {
             user.favorites.push(wine[0]._id);
