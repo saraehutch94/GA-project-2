@@ -87,3 +87,4 @@
 ## Next Steps
 
 * Add cart feature - ability for logged-in user to add their favorites to their cart for purchase
+* Favorites feature - keep heart red when user has favorited the wine, when user presses heart again it removes wine from their favorites list and also turns heart white
