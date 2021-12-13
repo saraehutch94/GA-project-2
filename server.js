@@ -61,7 +61,7 @@ app.use(session({
     saveUninitialized: false,
  }));
 
- // middleware that adds session to req.locals, otherwise sets user to null
+ // middleware that adds session to res.locals, otherwise sets user to null
  app.use(async function(req, res, next) {
     if(req.session && req.session.user) {
         const user = await require('./models/user').findById(req.session.user)
