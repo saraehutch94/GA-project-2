@@ -129,7 +129,7 @@ wineRouter.post("/redIndex", (req, res) => {
   const imageError = "Please enter an image with a .jpg or .png path";
 
   // if the image property guest submits includes proper/supported image path
-  if (["jpg", "png"].some((files) => req.body.img.includes(files))) {
+  if (req.body.img.includes("jpg", "png")) {
     // create new wine using req.body
     Wine.create(req.body, (error, newRed) => {
       // redirect to red index
@@ -154,7 +154,7 @@ wineRouter.post("/whiteIndex", (req, res) => {
   const imageError = "Please enter an image with a .jpg or .png path";
 
   // if the image property guest submits includes proper/supported image path
-  if (["jpg", "png"].some((files) => req.body.img.includes(files))) {
+  if (req.body.img.includes("jpg", "png")) {
     // create new wine using req.body
     Wine.create(req.body, (error, newWhite) => {
       // redirect to white index
