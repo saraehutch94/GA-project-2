@@ -29,15 +29,15 @@ mongoose.connect(DATABASE_URL);
 const db = mongoose.connection;
 
 db.on("error", (error) => {
-    console.log("Error: " + error.message);
+  console.log("Error: " + error.message);
 });
 
 db.on("connected", () => {
-    console.log("mongoDB is connected");
+  console.log("mongoDB is connected");
 });
 
 db.on("disconnected", () => {
-    console.log("mongoDB is disconnected");
+  console.log("mongoDB is disconnected");
 });
 
 // Mount middleware
@@ -55,21 +55,23 @@ app.use(methodOverride("_method"));
 app.use(morgan("dev"));
 
 // session middleware
-app.use(session({ 
+app.use(
+  session({
     secret: SECRET,
     resave: false,
     saveUninitialized: false,
- }));
+  })
+);
 
- // middleware that adds session to res.locals, otherwise sets user to null
- app.use(async function(req, res, next) {
-    if(req.session && req.session.user) {
-        const user = await require('./models/user').findById(req.session.user)
-        res.locals.user = user;
-    } else {
-        res.locals.user = null;
-    }
-    next();
+// middleware that adds session to res.locals, otherwise sets user to null
+app.use(async function (req, res, next) {
+  if (req.session && req.session.user) {
+    const user = await require("./models/user").findById(req.session.user);
+    res.locals.user = user;
+  } else {
+    res.locals.user = null;
+  }
+  next();
 });
 
 // Mount router middleware
@@ -79,5 +81,5 @@ app.use("/vino-italiano/users", userController);
 // Tell app to listen for requests from client/browser
 
 app.listen(PORT, () => {
-    console.log("Express is listening on port " + PORT);
+  console.log("Express is listening on port " + PORT);
 });
