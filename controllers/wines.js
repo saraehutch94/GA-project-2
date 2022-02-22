@@ -121,7 +121,7 @@ wineRouter.put("/:id", (req, res) => {
   );
 });
 
-// create red route
+// create red wine route
 wineRouter.post("/redIndex", (req, res) => {
   // assign shade property to red of added wine to red index
   req.body.shade = "Red";
@@ -146,7 +146,7 @@ wineRouter.post("/redIndex", (req, res) => {
   }
 });
 
-// create white route
+// create white wine route
 wineRouter.post("/whiteIndex", (req, res) => {
   // assign shade property to white of added wine to white index
   req.body.shade = "White";
