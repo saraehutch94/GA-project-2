@@ -151,7 +151,7 @@ wineRouter.post("/whiteIndex", (req, res) => {
   // assign shade property to white of added wine to white index
   req.body.shade = "White";
   // imageError variable for incorrect image entries
-  const imageError = "Please enter an image with a .jpg or .png path";
+  const imageError = "Please enter an image with a .jpg path";
 
   // if the image property guest submits includes proper/supported image path
   if (["jpg", "png"].some((files) => req.body.img.includes(files))) {
